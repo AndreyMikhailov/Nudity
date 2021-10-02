@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{FF11C285-E6CF-42FC-9AD4-2B0C9CA757F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nudity", "Nudity\Nudity.csproj", "{DDD3497D-89FF-4FDD-99D1-7529F113B3DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLib", "TestLib\TestLib.csproj", "{09B16C7F-7F11-4900-AB1D-16E1CC5C77B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF11C285-E6CF-42FC-9AD4-2B0C9CA757F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF11C285-E6CF-42FC-9AD4-2B0C9CA757F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF11C285-E6CF-42FC-9AD4-2B0C9CA757F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF11C285-E6CF-42FC-9AD4-2B0C9CA757F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDD3497D-89FF-4FDD-99D1-7529F113B3DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDD3497D-89FF-4FDD-99D1-7529F113B3DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDD3497D-89FF-4FDD-99D1-7529F113B3DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDD3497D-89FF-4FDD-99D1-7529F113B3DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09B16C7F-7F11-4900-AB1D-16E1CC5C77B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09B16C7F-7F11-4900-AB1D-16E1CC5C77B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09B16C7F-7F11-4900-AB1D-16E1CC5C77B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09B16C7F-7F11-4900-AB1D-16E1CC5C77B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
