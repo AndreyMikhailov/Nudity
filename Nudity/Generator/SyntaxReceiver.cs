@@ -2,7 +2,7 @@
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
-namespace Nudity
+namespace Nudity.Generator
 {
     internal class SyntaxReceiver : ISyntaxReceiver
     {
