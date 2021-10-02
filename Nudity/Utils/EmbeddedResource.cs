@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Reflection;
 
 namespace Nudity.Utils
@@ -16,10 +15,11 @@ namespace Nudity.Utils
                 .Replace(Path.DirectorySeparatorChar, '.')
                 .Replace(Path.AltDirectorySeparatorChar, '.');
 
-            using var stream = assembly.GetManifestResourceStream($"{baseName}.{resourceName}");
+            var fullResourceName = $"{baseName}.{resourceName}";
+            using var stream = assembly.GetManifestResourceStream(fullResourceName);
 
             if (stream == null)
-                throw new NotSupportedException();
+                throw new FileNotFoundException("Embedded resource not found.", fullResourceName);
 
             using var reader = new StreamReader(stream);
             return reader.ReadToEnd();
