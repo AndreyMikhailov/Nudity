@@ -51,7 +51,7 @@ namespace Nudity.Generator
                     var wrapperFullTypeName = GenerateTypeWrapper(context, ts);
                     return new AsExposedModel
                     {
-                        ArgumentTypeName = ts.ToString(),
+                        ArgumentTypeName = $"{ts.ContainingNamespace}.{ts.Name}",
                         ReturnTypeName = wrapperFullTypeName
                     };
                 })
