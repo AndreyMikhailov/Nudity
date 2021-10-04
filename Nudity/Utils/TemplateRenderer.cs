@@ -3,7 +3,7 @@ using Scriban;
 
 namespace Nudity.Utils
 {
-    public class TemplateRenderer
+    internal class TemplateRenderer
     {
         private readonly Dictionary<string, Template> _templatesCache = new();
         

@@ -5,6 +5,6 @@ namespace Nudity.Models
 {
     internal class ExposedObjectExtensionsModel
     {
-        public IEnumerable<AsExposedModel> Methods { get; set; } = Enumerable.Empty<AsExposedModel>();
+        public IEnumerable<AsExposedModel> Methods = Enumerable.Empty<AsExposedModel>();
     }
 }

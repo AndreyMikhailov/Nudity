@@ -12,12 +12,12 @@ using Nudity.Utils;
 namespace Nudity.Generator
 {
     [Generator]
-    public class SourceGenerator : ISourceGenerator
+    internal class SourceGenerator : ISourceGenerator
     {
         private readonly TemplateRenderer _templateRenderer = new();
         
         private readonly Lazy<string> _exposedObjectSource = 
-            new(() => EmbeddedResource.GetContent(TemplatePaths.ExposedObject));
+            new(() => EmbeddedResource.GetContent(TemplateLocations.ExposedObject));
         
         public void Initialize(GeneratorInitializationContext context)
         {
@@ -62,7 +62,7 @@ namespace Nudity.Generator
                 .ToArray();
             
             var model = new ExposedObjectExtensionsModel { Methods = methodsModel };
-            var source = _templateRenderer.Render(TemplatePaths.ExposedObjectExtensions, model);
+            var source = _templateRenderer.Render(TemplateLocations.ExposedObjectExtensions, model);
             context.AddSource(SourceFileNames.ExposedObjectExtensions, source);
             
             context.AddSource(SourceFileNames.ExposedObject, _exposedObjectSource.Value);
@@ -121,7 +121,7 @@ namespace Nudity.Generator
                         .Where(f => !IsBackingField(f.Name))
                         .Select(f => new FieldModel { Name = f.Name, TypeName = GenerateTypeIdentifier(f.Type) })
                 };
-                var source = _templateRenderer.Render(TemplatePaths.ExposedObjectAncestor, model);
+                var source = _templateRenderer.Render(TemplateLocations.ExposedObjectAncestor, model);
                 context.AddSource(hintName, source);
             }
             

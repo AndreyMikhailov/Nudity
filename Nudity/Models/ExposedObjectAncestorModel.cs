@@ -5,8 +5,8 @@ namespace Nudity.Models
 {
     internal record ExposedObjectAncestorModel
     {
-        public string NamespaceName { get; set; } = "";
-        public string ClassName { get; set; } = "";
-        public IEnumerable<FieldModel> Fields { get; set; } = Enumerable.Empty<FieldModel>();
+        public string NamespaceName = "";
+        public string ClassName = "";
+        public IEnumerable<FieldModel> Fields = Enumerable.Empty<FieldModel>();
     }
 }
