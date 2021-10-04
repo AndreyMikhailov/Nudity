@@ -29,6 +29,8 @@
     <EmbeddedResource Include="Templates\ExposedObjectExtensions.sbn" />
     <Compile Remove="Templates\ExposedObject.cs" />
     <EmbeddedResource Include="Templates\ExposedObject.cs" />
+    <None Remove="Templates\ExposedObject.sbn" />
+    <EmbeddedResource Include="Templates\ExposedObjectAncestor.sbn" />
   </ItemGroup>
 
 </Project>
