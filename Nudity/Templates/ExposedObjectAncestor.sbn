@@ -6,14 +6,16 @@ namespace {{ NamespaceName }}
     {
         public {{ ClassName }}(object wrappedObject) : base(wrappedObject)
         {
-        }    
+        }
         {{~ for field in Fields ~}}
         
         public global::{{ field.TypeName }} {{ field.Name }}
         {
             get { return base.GetField<global::{{ field.TypeName }}>("{{ field.Name }}"); }
+            {{~ if field.HasSetter ~}}
             set { base.SetField("{{ field.Name }}", value); }
-        }        
+            {{~ end ~}}
+        }
         {{~ end ~}}
     }
 }

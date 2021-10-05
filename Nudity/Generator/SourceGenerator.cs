@@ -119,7 +119,12 @@ namespace Nudity.Generator
                     Fields = members
                         .OfType<IField>()
                         .Where(f => !IsBackingField(f.Name))
-                        .Select(f => new FieldModel { Name = f.Name, TypeName = GenerateTypeIdentifier(f.Type) })
+                        .Select(f => new FieldModel
+                        {
+                            Name = f.Name, 
+                            TypeName = GenerateTypeIdentifier(f.Type), 
+                            HasSetter = !f.IsReadOnly
+                        })
                 };
                 var source = _templateRenderer.Render(TemplateLocations.ExposedObjectAncestor, model);
                 context.AddSource(hintName, source);

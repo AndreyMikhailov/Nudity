@@ -3,17 +3,17 @@
 namespace Nudity
 {
     internal static class ExposedObjectExtensions
-    {         
-        {{~ for method in Methods ~}}        
+    {
+        public static global::System.Object AsExposed(this global::System.Object value)
+        {
+            return value;
+        }
+        {{~ for method in Methods ~}}
+        
         public static global::{{ method.ReturnTypeName }} AsExposed(this global::{{ method.ArgumentTypeName }} value)
         {
             return new global::{{ method.ReturnTypeName }}(value);
         }
-        
         {{~ end ~}}
-        public static global::System.Object AsExposed(this global::System.Object value) 
-        {
-            return value;
-        }
     }
 }

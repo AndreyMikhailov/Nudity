@@ -4,5 +4,6 @@ namespace Nudity.Models
     {
         public string Name = "";
         public string TypeName = "";
+        public bool HasSetter = true;
     }
 }
